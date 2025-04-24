@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   HomeIcon,
   UserGroupIcon,
@@ -7,15 +7,15 @@ import {
   ClipboardDocumentListIcon,
   Cog6ToothIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline';
-import { cn } from '../../utils/cn';
+} from "@heroicons/react/24/outline";
+import { cn } from "../../utils/cn";
 
 const navigation = [
-  { name: 'Dashboard', href: '/', icon: HomeIcon },
-  { name: 'Visitors', href: '/visitors', icon: UserGroupIcon },
-  { name: 'Departments', href: '/departments', icon: BuildingOfficeIcon },
-  { name: 'Reports', href: '/reports', icon: ClipboardDocumentListIcon },
-  { name: 'Settings', href: '/settings', icon: Cog6ToothIcon },
+  { name: "Dashboard", href: "/", icon: HomeIcon },
+  { name: "Visitors", href: "/visitors", icon: UserGroupIcon },
+  { name: "Departments", href: "/departments", icon: BuildingOfficeIcon },
+  { name: "Reports", href: "/reports", icon: ClipboardDocumentListIcon },
+  { name: "Settings", href: "/settings", icon: Cog6ToothIcon },
 ];
 
 export default function Sidebar({ onClose }) {
@@ -23,10 +23,12 @@ export default function Sidebar({ onClose }) {
   const location = useLocation();
 
   return (
-    <div className={cn(
-      'flex flex-col h-full bg-white border-r border-gray-200 transition-all duration-300',
-      collapsed ? 'w-16' : 'w-64'
-    )}>
+    <div
+      className={cn(
+        "flex flex-col h-full bg-white border-r border-gray-200 transition-all duration-300",
+        collapsed ? "w-16" : "w-64"
+      )}
+    >
       {/* Mobile close button */}
       <div className="lg:hidden flex items-center justify-end p-2">
         <button
@@ -59,7 +61,11 @@ export default function Sidebar({ onClose }) {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d={collapsed ? 'M13 5l7 7-7 7M5 5l7 7-7 7' : 'M11 19l-7-7 7-7m8 14l-7-7 7-7'}
+              d={
+                collapsed
+                  ? "M13 5l7 7-7 7M5 5l7 7-7 7"
+                  : "M11 19l-7-7 7-7m8 14l-7-7 7-7"
+              }
             />
           </svg>
         </button>
@@ -74,18 +80,18 @@ export default function Sidebar({ onClose }) {
               key={item.name}
               to={item.href}
               className={cn(
-                'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
+                "group flex items-center px-2 py-2 text-sm font-medium rounded-md",
                 isActive
-                  ? 'bg-primary-50 text-primary-600'
-                  : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                  ? "bg-primary-50 text-primary-600"
+                  : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
               )}
             >
               <item.icon
                 className={cn(
-                  'h-5 w-5 flex-shrink-0',
+                  "h-5 w-5 flex-shrink-0",
                   isActive
-                    ? 'text-primary-600'
-                    : 'text-gray-400 group-hover:text-gray-500'
+                    ? "text-primary-600"
+                    : "text-gray-400 group-hover:text-gray-500"
                 )}
               />
               {!collapsed && <span className="ml-3">{item.name}</span>}
@@ -99,11 +105,7 @@ export default function Sidebar({ onClose }) {
         <div className="flex-shrink-0 p-3 border-t border-gray-200">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img
-                className="h-8 w-8 rounded-full"
-                src='./fawaz.jpg'
-                alt=""
-              />
+              <img className="h-8 w-8 rounded-full" src="./fawaz.jpg" alt="" />
             </div>
             <div className="ml-3">
               <p className="text-sm font-medium text-gray-700">Akinola Fawaz</p>
@@ -114,4 +116,4 @@ export default function Sidebar({ onClose }) {
       )}
     </div>
   );
-} 
+}

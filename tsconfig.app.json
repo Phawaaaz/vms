@@ -1,0 +1,13 @@
+{
+  // Removed schema reference to avoid loading issues
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*", "src"]
+}
+
