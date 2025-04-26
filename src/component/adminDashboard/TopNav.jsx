@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -20,7 +19,7 @@ const navigation = [
 ];
 
 export default function Sidebar({ onClose }) {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const location = useLocation();
 
   return (
@@ -31,7 +30,7 @@ export default function Sidebar({ onClose }) {
       )}
     >
       {/* Mobile close button */}
-      <div className="lg:hidden flex items-center justify-end p-2">
+      {/* <div className="lg:hidden flex items-center justify-end p-2">
         <button
           type="button"
           className="text-gray-400 hover:text-gray-500"
@@ -40,7 +39,7 @@ export default function Sidebar({ onClose }) {
           <span className="sr-only">Close sidebar</span>
           <XMarkIcon className="h-5 w-5" />
         </button>
-      </div>
+      </div> */}
 
       {/* Logo */}
       <div className="flex items-center justify-between px-3 py-3 border-b border-gray-200">
