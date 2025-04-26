@@ -1,5 +1,10 @@
 import React from "react";
-import { Facebook, Twitter, LinkedIn, Instagram } from "lucide-react";
+import {
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  InstagramIcon,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -68,16 +73,16 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Follow Us</h4>
             <div className="flex space-x-6 text-2xl">
               <a href="https://facebook.com" className="hover:text-sky-400">
-                <Facebook />
+                <FacebookIcon />
               </a>
               <a href="https://twitter.com" className="hover:text-sky-400">
-                <Twitter />
+                <TwitterIcon />
               </a>
               <a href="https://linkedin.com" className="hover:text-sky-400">
-                <LinkedIn />
+                <LinkedinIcon />
               </a>
               <a href="https://instagram.com" className="hover:text-sky-400">
-                <Instagram />
+                <InstagramIcon />
               </a>
             </div>
           </div>

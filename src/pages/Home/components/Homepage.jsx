@@ -7,7 +7,7 @@ import Testimonials from "./Testimonials";
 import Pricing from "./Pricing";
 import IndustriesServed from "./IndustriesServed";
 import CallToAction from "./CallToAction";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 
 const Homepage = () => {
   return (
@@ -20,7 +20,7 @@ const Homepage = () => {
       <Pricing />
       <IndustriesServed />
       <CallToAction />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

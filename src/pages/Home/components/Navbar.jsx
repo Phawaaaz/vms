@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  ChevronDown,
-  User,
-  Building,
-  FileText,
-  Globe,
-} from "lucide-react";
+import { ChevronDown, User, Building, FileText, Globe } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +56,7 @@ const Navbar = () => {
   return (
     <header className="w-full bg-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="text-xl font-bold">VMS</div>
+        <div className="text-2xl font-bold">VMS</div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
