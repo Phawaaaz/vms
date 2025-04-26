@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import Sidebar from './Sidebar';
-import TopNav from './TopNav';
+import React from "react";
+import { useState } from "react";
+import Sidebar from "./Sidebar";
+import TopNav from "./TopNav";
 
 export default function Layout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -12,13 +13,13 @@ export default function Layout({ children }) {
         <div className="lg:hidden">
           <div
             className={`fixed inset-0 z-40 flex transform transition-transform ease-in-out duration-300 ${
-              sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+              sidebarOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
             {/* Backdrop */}
             <div
               className={`fixed inset-0 bg-gray-600 bg-opacity-75 transition-opacity ${
-                sidebarOpen ? 'opacity-100' : 'opacity-0'
+                sidebarOpen ? "opacity-100" : "opacity-0"
               }`}
               onClick={() => setSidebarOpen(false)}
             />
@@ -48,4 +49,4 @@ export default function Layout({ children }) {
       </div>
     </div>
   );
-} 
+}
