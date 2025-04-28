@@ -200,7 +200,6 @@ function FieldWrapper({
   id,
   label,
   value,
-  Icon,
   error,
   rightEl,
   onChange,
