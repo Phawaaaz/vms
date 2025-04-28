@@ -6,11 +6,13 @@ import {
   ClockIcon,
   ArrowRightOnRectangleIcon,
   XMarkIcon,
+  CalendarIcon
 } from "@heroicons/react/24/outline";
 import { cn } from "../../lib/utils";
 
 const visitorNavigation = [
   { name: "Dashboard", href: "/visitor/dashboard", icon: HomeIcon },
+  { name: "Bookings", href: "/visitor/bookings", icon: CalendarIcon },
   { name: "My Profile", href: "/visitor/profile", icon: UserCircleIcon },
   { name: "My QR Code", href: "/visitor/qrcode", icon: QrCodeIcon },
   { name: "Visit History", href: "/visitor/history", icon: ClockIcon },
