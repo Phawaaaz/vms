@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section className="bg-gray-400 min-h-[80vh] flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-20 text-foreground">
@@ -13,7 +15,10 @@ const Hero = () => {
             and secure visitor tracking. One platform for all your needs.
           </p>
           <div className="mt-6">
-            <button className="px-6 py-2 rounded-lg bg-sky-300 hover:bg-sky-500 text-sm">
+            <button
+              onClick={() => navigate("/auth/register")}
+              className="px-6 py-2 rounded-lg bg-sky-300 hover:bg-sky-500 text-sm"
+            >
               Get Started
             </button>
           </div>

@@ -103,7 +103,7 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <a
-            href="/get-started"
+            href="/auth/login"
             className="px-6 py-2 rounded-lg bg-sky-300 hover:bg-sky-500 text-sm"
           >
             Get Started
