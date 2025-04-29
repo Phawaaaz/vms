@@ -20,6 +20,7 @@ export default function AuthLayout() {
             >
               {isLogin ? "Sign up" : "Sign in"}
             </Link>
+            
           </p>
         </div>
 
